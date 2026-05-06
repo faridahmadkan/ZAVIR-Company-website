@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+    background: url('Zavir.copy.PNG'), linear-gradient(to bottom, rgb(14, 125, 165), rgb(14, 125, 165));
+    background-blend-mode: multiply;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.up-position {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    background-color: rgb(22, 51, 71);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Port {
+    color: chocolate;
+    font-family: arial;
+    font-size: large;
+    font-weight: bold;
+    text-shadow: 1px 1px 13px rgb(243, 105, 7);
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.folio {
+    color: chocolate;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.button {
+    padding: 0px;
+    background-color: rgb(22, 51, 71);
+    color: chocolate;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    text-shadow: 1px 1px 20px rgb(243, 105, 7);
+    padding-top: 4px;
+    color: rgb(247, 120, 9);
+}
+
+.button-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact-header {
+    margin-top: 80px;
+    padding: 0 20px;
+}
+
+.Lets {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+
+.get {
+    font-family: arial;
+    font-weight: normal;
+    color: rgb(187, 202, 216);
+    margin-bottom: 25px;
+}
+
+/* contact info cards */
+.contact-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 20px 30px 20px;
+}
+
+.email-and-paras {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(22, 51, 71, 0.7);
+    backdrop-filter: blur(4px);
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(210, 105, 30, 0.3);
+    flex: 1;
+    min-width: 200px;
+}
+
+.email-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.two-paras {
+    display: flex;
+    flex-direction: column;
+}
+
+.Email-Address {
+    font-family: arial;
+    color: rgb(199, 204, 209);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.main-email {
+    font-family: arial;
+    color: rgb(187, 202, 216);
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* contact row - form and social side by side */
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 20px 40px 20px;
+}
+
+.informaton-div {
+    flex: 2;
+    min-width: 280px;
+    background-color: rgb(5, 47, 66);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(27, 62, 77);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.Your-Name,
+.Your-Email,
+.Your-Message,
+.Your-Project {
+    color: aliceblue;
+    font-family: arial;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.Your-Name:first-of-type {
+    margin-top: 0;
+}
+
+.input-Your-Name,
+.input-Your-Email,
+.input-Your-Project {
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: rgb(9, 37, 50);
+    color: aliceblue;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.input-Your-Name:focus,
+.input-Your-Email:focus,
+.input-Your-Project:focus,
+.Your-Message-input:focus {
+    border: 1px solid chocolate;
+}
+
+.Your-Message-input {
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: rgb(9, 37, 50);
+    color: aliceblue;
+    outline: none;
+    width: 100%;
+    min-height: 100px;
+    font-family: arial;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+.Send-Message-and-paragraph {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.Send-Message {
+    width: 130px;
+    height: 38px;
+    border: none;
+    background-color: rgb(225, 126, 55);
+    color: aliceblue;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.Send-Message:hover {
+    box-shadow: 1px 1px 13px rgb(243, 105, 7);
+    background-color: rgb(235, 116, 45);
+}
+
+.we-value {
+    color: rgb(195, 202, 207);
+    font-family: arial;
+    font-size: 0.7rem;
+    max-width: 220px;
+}
+
+#formStatus {
+    margin-top: 12px;
+    font-family: arial;
+    font-size: 0.8rem;
+}
+
+/* social media section */
+.social-apps {
+    flex: 1;
+    min-width: 200px;
+    background: rgba(22, 51, 71, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.connect-title {
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: chocolate;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.whatsapp,
+.insta,
+.facebook,
+.linkdin {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.2s;
+    background-color: rgba(22, 51, 71, 0.8);
+}
+
+.whatsapp:hover {
+    box-shadow: 1px 1px 13px rgb(8, 210, 8);
+    transform: scale(1.05);
+    background-color: rgb(6, 152, 6);
+}
+
+.insta:hover {
+    box-shadow: 1px 1px 20px rgb(255, 6, 93);
+    transform: scale(1.05);
+    background-color: rgb(173, 19, 73);
+}
+
+.facebook:hover {
+    box-shadow: 1px 1px 20px rgb(4, 68, 245);
+    transform: scale(1.05);
+}
+
+.linkdin:hover {
+    box-shadow: 1px 1px 20px rgb(35, 121, 202);
+    transform: scale(1.05);
+}
+
+.a {
+    text-decoration: none;
+}
+
+/* ========== RESPONSIVE STYLES - MOBILE FIRST ========== */
+@media (max-width: 1200px) {
+    .button-div {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .button-div {
+        margin-left: auto;
+    }
+    .Lets {
+        font-size: 1.8rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .up-position {
+        flex-wrap: nowrap;
+        height: auto;
+        min-height: 55px;
+        padding: 0 12px;
+        position: fixed;
+    }
+    .Port {
+        font-size: 0.95rem;
+        margin-left: 0;
+    }
+    .button-div {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 6px;
+    }
+    .button {
+        margin-left: 6px;
+        font-size: 0.8rem;
+    }
+    
+    .contact-header {
+        margin-top: 75px;
+    }
+    
+    .Lets {
+        font-size: 1.4rem;
+    }
+    
+    .get {
+        font-size: 0.9rem;
+    }
+    
+    .contact-info-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .email-and-paras {
+        width: 100%;
+    }
+    
+    .contact-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .informaton-div {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .Send-Message-and-paragraph {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .we-value {
+        max-width: 100%;
+        font-size: 0.7rem;
+    }
+    
+    .social-apps {
+        width: 100%;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .whatsapp,
+    .insta,
+    .facebook,
+    .linkdin {
+        height: 48px;
+        width: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .up-position {
+        padding: 0 10px;
+    }
+    .Port {
+        font-size: 0.85rem;
+    }
+    .folio {
+        font-size: 10px;
+    }
+    .button {
+        margin-left: 5px;
+        font-size: 0.7rem;
+    }
+    
+    .contact-header {
+        margin-top: 70px;
+        padding: 0 15px;
+    }
+    
+    .Lets {
+        font-size: 1.2rem;
+    }
+    
+    .get {
+        font-size: 0.8rem;
+    }
+    
+    .contact-info-container {
+        margin: 0 15px 20px 15px;
+    }
+    
+    .email-and-paras {
+        padding: 10px 15px;
+    }
+    
+    .email-img {
+        height: 32px;
+        width: 32px;
+        margin-right: 12px;
+    }
+    
+    .Email-Address {
+        font-size: 0.75rem;
+    }
+    
+    .main-email {
+        font-size: 0.8rem;
+    }
+    
+    .contact-row {
+        margin: 0 15px 30px 15px;
+    }
+    
+    .informaton-div {
+        padding: 15px;
+    }
+    
+    .Your-Name,
+    .Your-Email,
+    .Your-Message,
+    .Your-Project {
+        font-size: 0.8rem;
+    }
+    
+    .input-Your-Name,
+    .input-Your-Email,
+    .input-Your-Project {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .Your-Message-input {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .Send-Message {
+        width: 100%;
+        max-width: 130px;
+    }
+    
+    .connect-title {
+        font-size: 1rem;
+    }
+    
+    .whatsapp,
+    .insta,
+    .facebook,
+    .linkdin {
+        height: 42px;
+        width: 42px;
+    }
+}
+
+/* fix for very small devices */
+@media (max-width: 360px) {
+    .Lets {
+        font-size: 1rem;
+    }
+    
+    .email-and-paras {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .email-img {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    
+    .two-paras {
+        align-items: center;
+    }
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>About Us | ZAVIR-tech</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body class="body">
+    <div class="up-position">
+        <p class="Port">ZAVIR<span class="folio">-tech</span></p>
+        <div class="button-div">
+            <a href="index.html"><button class="button">Home</button></a>
+            <a href="about.html"><button class="button">About</button></a>
+            <a href="Projects.html"><button class="button">Projects</button></a>
+            <a href="Contact.html"><button class="button">Contact</button></a>
+        </div>
+    </div>
+
+    <div class="about-header">
+        <p class="About-us">About ZAVIR-tech</p> 
+        <p class="Who-We">Building better software, one project at a time.</p>
+    </div>
+
+    <!-- Our Story section -->
+    <div class="story-div">
+        <p class="story-title">Our Story</p>
+        <p class="story-para">ZAVIR-tech was founded with a simple idea: create high-quality software solutions without the complexity and high costs often associated with tech development. We are a fresh team of developers and designers passionate about building things that work well and look good.</p>
+    </div>
+
+    <!-- What makes us different -->
+    <div class="different-section">
+        <p class="different-title">What Makes Us Different</p>
+        <div class="different-grid">
+            <div class="different-card">
+                <p class="different-card-title">Simple Process</p>
+                <p class="different-card-desc">We keep things straightforward. No confusing jargon, just clear communication and honest timelines.</p>
+            </div>
+            <div class="different-card">
+                <p class="different-card-title">Focus on Quality</p>
+                <p class="different-card-desc">We take pride in our work. Every line of code is written with care and attention to detail.</p>
+            </div>
+            <div class="different-card">
+                <p class="different-card-title">Client First</p>
+                <p class="different-card-desc">Your goals are our goals. We work closely with you to understand exactly what you need.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- technologies we use -->
+    <div class="tech-section">
+        <p class="tech-title">Technologies We Work With</p>
+        <div class="tech-grid">
+            <div class="tech-item">HTML5 / CSS3</div>
+            <div class="tech-item">JavaScript / React</div>
+            <div class="tech-item">Python / Django</div>
+            <div class="tech-item">Node.js / Express</div>
+            <div class="tech-item">MySQL / PostgreSQL</div>
+            <div class="tech-item">MongoDB</div>
+        </div>
+    </div>
+
+    <div class="two-para-and-button">
+        <div>
+            <p class="Ready-to-para">Ready to Start Your Project?</p>
+            <p class="down-para-of-Ready">Let's discuss your ideas and see how we can help bring them to life.</p>
+        </div>
+        <a href="Contact.html"><button class="Get-in-Touch">Get in Touch</button></a>
+    </div>
+
+    <footer class="about-footer">
+        <p>© 2026 ZAVIR-tech | Software Solutions Company</p>
+    </footer>
+
+    <script>
+        const diffCards = document.querySelectorAll('.different-card');
+        const techItems = document.querySelectorAll('.tech-item');
+        
+        function showAlertMsg(text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.textContent = text;
+            msgDiv.style.position = 'fixed';
+            msgDiv.style.bottom = '20px';
+            msgDiv.style.left = '50%';
+            msgDiv.style.transform = 'translateX(-50%)';
+            msgDiv.style.backgroundColor = 'rgba(0,0,0,0.85)';
+            msgDiv.style.color = '#ffd799';
+            msgDiv.style.padding = '12px 24px';
+            msgDiv.style.borderRadius = '40px';
+            msgDiv.style.fontSize = '0.85rem';
+            msgDiv.style.borderLeft = '3px solid chocolate';
+            msgDiv.style.borderRight = '3px solid chocolate';
+            msgDiv.style.zIndex = '999';
+            msgDiv.style.fontFamily = 'arial';
+            document.body.appendChild(msgDiv);
+            setTimeout(() => {
+                msgDiv.remove();
+            }, 3000);
+        }
+        
+        const cardDetails = {
+            'Simple Process': 'We break down your project into simple steps: discovery, design, development, and delivery. You will always know what is happening next.',
+            'Focus on Quality': 'We test everything thoroughly before delivery. Our code is clean, well-documented, and built to last.',
+            'Client First': 'Your satisfaction is our priority. We offer revisions and support to make sure you are happy with the final product.'
+        };
+        
+        diffCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('.different-card-title').textContent;
+                const detail = cardDetails[title] || 'We are committed to providing the best service possible.';
+                showAlertMsg(detail);
+            });
+        });
+        
+        const techDetails = {
+            'HTML5 / CSS3': 'Modern, semantic HTML5 and CSS3 with responsive design principles.',
+            'JavaScript / React': 'Dynamic front-end interfaces using React and vanilla JavaScript.',
+            'Python / Django': 'Backend development with Python and Django framework.',
+            'Node.js / Express': 'Fast and scalable server-side applications with Node.js.',
+            'MySQL / PostgreSQL': 'Relational database design and management.',
+            'MongoDB': 'NoSQL database solutions for flexible data storage.'
+        };
+        
+        techItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const tech = this.textContent;
+                const detail = techDetails[tech] || 'We use modern, industry-standard technologies for all our projects.';
+                showAlertMsg(detail);
+            });
+        });
+    </script>
+</body>
+</html>

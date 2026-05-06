@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ZAVIR-tech | Software Solutions</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="body">
+    <div class="up-position">
+        <p class="Port">ZAVIR<span class="folio">-tech</span></p>
+        <div class="button-div">
+            <a href="index.html"><button class="button">Home</button></a>
+            <a href="about.html"><button class="button">About</button></a>
+            <a href="Projects.html"><button class="button">Projects</button></a>
+            <a href="Contact.html"><button class="button">Contact</button></a>
+        </div>
+    </div>
+
+    <div class="hero-wrap">
+        <p class="big-font">Welcome to ZAVIR</p>
+        <p class="small-font">Your trusted technology solutions provider.</p>
+        <a href="Contact.html"><button class="Get-button">Get Started</button></a>
+    </div>
+
+    <!-- What We Do section -->
+    <div class="company-section">
+        <div class="section-title">What We Do</div>
+        <p class="about-text">
+            <strong>ZAVIR-tech</strong> specializes in building modern software solutions. We focus on creating 
+            clean, functional, and reliable websites, databases, and applications for businesses 
+            looking to establish or improve their digital presence.
+        </p>
+
+        <div class="section-title">Our Services</div>
+        <div class="services-grid" id="servicesGrid">
+            <div class="service-item" data-service="web">
+                <h3>Website Development</h3>
+                <p>Responsive, fast-loading websites that work perfectly on all devices.</p>
+            </div>
+            <div class="service-item" data-service="database">
+                <h3>Database Solutions</h3>
+                <p>Secure and organized data management systems for your business.</p>
+            </div>
+            <div class="service-item" data-service="application">
+                <h3>Application Development</h3>
+                <p>Custom web and mobile applications built to your exact needs.</p>
+            </div>
+            <div class="service-item" data-service="consulting">
+                <h3>Technical Consulting</h3>
+                <p>Expert advice on technology choices and project planning.</p>
+            </div>
+        </div>
+
+        <div id="homeMsg" class="message-area">
+            Click on any service above to learn more.
+        </div>
+
+        <!-- Why choose us section -->
+        <div class="why-choose">
+            <div class="section-title">Why Choose Us</div>
+            <div class="features-row">
+                <div class="feature-badge">Clean Code</div>
+                <div class="feature-badge">Responsive Design</div>
+                <div class="feature-badge">Timely Delivery</div>
+                <div class="feature-badge">Ongoing Support</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 ZAVIR-tech | Software Solutions Company</p>
+    </footer>
+
+    <script>
+        const msgBox = document.getElementById('homeMsg');
+        
+        function showMessage(text) {
+            msgBox.textContent = text;
+            msgBox.style.opacity = '0';
+            setTimeout(() => {
+                msgBox.style.opacity = '1';
+            }, 10);
+        }
+        
+        const serviceInfo = {
+            web: 'Website Development: We build responsive websites using modern HTML, CSS, and JavaScript. Our sites are optimized for speed, SEO, and user experience across all devices.',
+            database: 'Database Solutions: We design structured databases using MySQL, PostgreSQL, or MongoDB. Your data stays organized, secure, and easily accessible when you need it.',
+            application: 'Application Development: From task managers to business tools, we build custom applications for web and mobile platforms that solve real problems.',
+            consulting: 'Technical Consulting: Not sure what technology to use? We provide honest advice to help you make informed decisions about your software projects.'
+        };
+        
+        const serviceItems = document.querySelectorAll('.service-item');
+        serviceItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const serviceType = this.getAttribute('data-service');
+                const details = serviceInfo[serviceType] || 'Contact us for more information about our services.';
+                showMessage(details);
+            });
+        });
+        
+        const badges = document.querySelectorAll('.feature-badge');
+        const badgeInfo = {
+            'Clean Code': 'We write clean, readable, and maintainable code that follows industry best practices.',
+            'Responsive Design': 'All our websites look great on desktops, tablets, and smartphones.',
+            'Timely Delivery': 'We respect deadlines and communicate clearly about project timelines.',
+            'Ongoing Support': 'We provide continued support and maintenance after your project launches.'
+        };
+        
+        badges.forEach(badge => {
+            badge.addEventListener('click', function() {
+                const text = this.textContent;
+                const info = badgeInfo[text] || 'We are committed to quality and client satisfaction.';
+                showMessage(info);
+            });
+        });
+        
+        setTimeout(() => {
+            showMessage('Welcome to ZAVIR-tech. Click any service or feature to learn more.');
+        }, 800);
+    </script>
+</body>
+</html>

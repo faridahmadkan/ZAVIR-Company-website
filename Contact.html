@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Contact Us | ZAVIR-tech</title>
+    <link rel="stylesheet" href="Contact.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body class="body">
+    <div class="up-position">
+        <p class="Port">ZAVIR<span class="folio">-tech</span></p>
+        <div class="button-div">
+            <a href="index.html"><button class="button">Home</button></a>
+            <a href="about.html"><button class="button">About</button></a>
+            <a href="Projects.html"><button class="button">Projects</button></a>
+            <a href="Contact.html"><button class="button">Contact</button></a>
+        </div>
+    </div>
+
+    <div class="contact-header">
+        <p class="Lets">Let's Start Your Project With ZAVIR-tech</p>
+        <p class="get">Get in touch and we will be in contact shortly.</p>
+    </div>
+
+    <!-- contact info cards -->
+    <div class="contact-info-container">
+        <div class="email-and-paras">
+            <img class="email-img" src="mail.png" alt="email">
+            <div class="two-paras">
+                <p class="Email-Address">Email Address</p>
+                <p class="main-email">zavirteam@gmail.com</p>
+            </div>
+        </div>
+        <div class="email-and-paras">
+            <img class="email-img" src="mobile.png" alt="phone">
+            <div class="two-paras">
+                <p class="Email-Address">Contact Number</p>
+                <p class="main-email">+93784519843</p>
+            </div>
+        </div>
+        <div class="email-and-paras">
+            <img class="email-img" src="placeholder.png" alt="location">
+            <div class="two-paras">
+                <p class="Email-Address">Location</p>
+                <p class="main-email">Kabul, Afghanistan</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact form and social media side by side on desktop -->
+    <div class="contact-row">
+        <div class="informaton-div">
+            <p class="Your-Name">Name</p>
+            <input class="input-Your-Name" id="userName" type="text" placeholder="Your Name">
+            
+            <p class="Your-Email">Email Address</p>
+            <input class="input-Your-Email" id="userEmail" type="email" placeholder="example@email.com">
+            
+            <p class="Your-Project">Project</p>
+            <input class="input-Your-Project" id="userProject" type="text" placeholder="Project inquiry">
+            
+            <p class="Your-Message">Your Message</p>
+            <textarea class="Your-Message-input" id="userMessage" placeholder="Tell us about your project..."></textarea>
+            
+            <div class="Send-Message-and-paragraph">
+                <button class="Send-Message" id="sendMessageBtn">Send Message</button>
+                <p class="we-value">We value your privacy. Your information is safe and will never be shared.</p>
+            </div>
+            <div id="formStatus"></div>
+        </div>
+
+        <div class="social-apps">
+            <p class="connect-title">Connect With Us</p>
+            <div class="social-icons">
+                <a class="a" href="https://wa.me/93792060378" target="_blank">
+                    <img class="whatsapp" src="social 2.png" alt="WhatsApp">
+                </a>
+                <a class="a" href="https://www.instagram.com/ZAVIR_SOFTWARE_SOLUTIONS" target="_blank">
+                    <img class="insta" src="social.png" alt="Instagram">
+                </a>
+                <a class="a" href="https://www.facebook.com/ZAVIR.Saftware.Solutions" target="_blank">
+                    <img class="facebook" src="facebook.png" alt="Facebook">
+                </a>
+                <a class="a" href="https://www.linkedin.com/in/ZAVIR-Team" target="_blank">
+                    <img class="linkdin" src="linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            emailjs.init({
+                publicKey: "jEfECdr-KUfMlpHij",
+            });
+        })();
+
+        const sendBtn = document.getElementById('sendMessageBtn');
+        const statusDiv = document.getElementById('formStatus');
+        const SERVICE_ID = 'service_o05do2c';
+        const TEMPLATE_ID = 'template_9ru0ezd';
+
+        sendBtn.addEventListener('click', async function() {
+            const name = document.getElementById('userName').value.trim();
+            const email = document.getElementById('userEmail').value.trim();
+            const project = document.getElementById('userProject').value.trim();
+            const message = document.getElementById('userMessage').value.trim();
+
+            if(!name || !email || !message) {
+                statusDiv.innerHTML = 'Please fill Name, Email, and Message fields.';
+                statusDiv.style.color = '#ffaa66';
+                return;
+            }
+            if(!email.includes('@') || !email.includes('.')) {
+                statusDiv.innerHTML = 'Please enter a valid email address.';
+                statusDiv.style.color = '#ffaa66';
+                return;
+            }
+
+            let fullMessage = message;
+            if(project) {
+                fullMessage = `Project: ${project}\n\n${message}`;
+            }
+            
+            const currentTime = new Date().toLocaleString();
+
+            const templateParams = {
+                name: name,
+                email: email,
+                message: fullMessage,
+                time: currentTime
+            };
+
+            sendBtn.disabled = true;
+            sendBtn.style.opacity = '0.7';
+            sendBtn.textContent = 'Sending...';
+            statusDiv.innerHTML = 'Sending message...';
+            statusDiv.style.color = '#87ceeb';
+
+            try {
+                const response = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+                
+                if(response.status === 200) {
+                    statusDiv.innerHTML = 'Message sent successfully! We will get back to you soon.';
+                    statusDiv.style.color = '#2ecc71';
+                    document.getElementById('userName').value = '';
+                    document.getElementById('userEmail').value = '';
+                    document.getElementById('userProject').value = '';
+                    document.getElementById('userMessage').value = '';
+                    
+                    setTimeout(() => {
+                        if(statusDiv.innerHTML === 'Message sent successfully! We will get back to you soon.') {
+                            statusDiv.innerHTML = '';
+                        }
+                    }, 5000);
+                } else {
+                    throw new Error(`Status: ${response.status}`);
+                }
+            } catch(error) {
+                console.error('EmailJS Error:', error);
+                statusDiv.innerHTML = 'Failed to send message. Please try again or contact us directly at zavirteam@gmail.com';
+                statusDiv.style.color = '#e67e22';
+            } finally {
+                sendBtn.disabled = false;
+                sendBtn.style.opacity = '1';
+                sendBtn.textContent = 'Send Message';
+            }
+        });
+    </script>
+</body>
+</html>

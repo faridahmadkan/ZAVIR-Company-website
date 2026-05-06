@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+    background: url('Zavir.copy.PNG'), linear-gradient(to bottom, rgb(14, 125, 165), rgb(14, 125, 165));
+    background-blend-mode: multiply;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.Port {
+    color: chocolate;
+    font-family: arial;
+    font-size: large;
+    font-weight: bold;
+    text-shadow: 1px 1px 13px rgb(243, 105, 7);
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.folio {
+    color: chocolate;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.up-position {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    background-color: rgb(22, 51, 71);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    padding: 0px;
+    background-color: rgb(22, 51, 71);
+    color: chocolate;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    text-shadow: 1px 1px 20px rgb(243, 105, 7);
+    padding-top: 4px;
+    color: rgb(247, 120, 9);
+}
+
+.button-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.big-font {
+    color: aliceblue;
+    margin-top: 200px;
+    font-family: arial;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.small-font {
+    color: whitesmoke;
+    margin-left: 20px;
+    margin-top: -6px;
+    font-family: arial;
+}
+
+.Get-button {
+    width: 100px;
+    margin-left: 20px;
+    height: 30px;
+    border: none;
+    background-color: rgb(225, 126, 55);
+    color: aliceblue;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.Get-button:hover {
+    box-shadow: 1px 1px 13px rgb(243, 105, 7);
+    background-color: rgb(235, 116, 45);
+}
+
+.hero-wrap {
+    margin-bottom: 10px;
+}
+
+.company-section {
+    background: rgba(22, 51, 71, 0.88);
+    backdrop-filter: blur(6px);
+    margin: 30px 20px 50px 20px;
+    border-radius: 20px;
+    padding: 35px 28px;
+    color: white;
+    border: 1px solid rgba(210, 105, 30, 0.4);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: chocolate;
+    border-left: 4px solid chocolate;
+    padding-left: 18px;
+    margin-bottom: 22px;
+    letter-spacing: -0.3px;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 28px;
+    color: #f0f0f0;
+}
+
+.about-text strong {
+    color: chocolate;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.service-item {
+    background: rgba(14, 45, 65, 0.75);
+    border-radius: 18px;
+    padding: 22px 18px;
+    flex: 1 1 210px;
+    text-align: center;
+    transition: all 0.25s;
+    border-bottom: 2px solid chocolate;
+    cursor: pointer;
+}
+
+.service-item:hover {
+    background: rgba(210, 105, 30, 0.25);
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    color: chocolate;
+    margin: 12px 0 8px;
+    font-size: 1.2rem;
+}
+
+.service-item p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+
+.message-area {
+    text-align: center;
+    margin: 18px 0 20px;
+    padding: 12px 18px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 40px;
+    font-size: 0.85rem;
+    color: #ffd799;
+    border-left: 3px solid chocolate;
+    border-right: 3px solid chocolate;
+    transition: opacity 0.2s;
+}
+
+.features-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.feature-badge {
+    flex: 1;
+    min-width: 130px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 14px;
+    padding: 10px 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.feature-badge:hover {
+    background: rgba(210, 105, 30, 0.5);
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: rgb(14, 45, 65);
+    text-align: center;
+    padding: 22px;
+    color: #aaa;
+    font-size: 0.75rem;
+    margin-top: auto;
+}
+
+.why-choose {
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+    .button-div {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .button-div {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .up-position {
+        flex-wrap: nowrap;
+        height: auto;
+        min-height: 55px;
+        padding: 0 12px;
+        position: fixed;
+    }
+    .Port {
+        font-size: 0.95rem;
+        margin-left: 0;
+    }
+    .button-div {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 6px;
+    }
+    .button {
+        margin-left: 6px;
+        font-size: 0.8rem;
+    }
+    .big-font {
+        font-size: x-large;
+        margin-top: 110px;
+        text-align: center;
+        margin-left: 0;
+    }
+    .small-font {
+        text-align: center;
+        margin-left: 0;
+    }
+    .Get-button {
+        display: block;
+        margin: 16px auto;
+    }
+    .company-section {
+        margin: 20px 15px 35px 15px;
+        padding: 22px 16px;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .up-position {
+        padding: 0 10px;
+    }
+    .Port {
+        font-size: 0.85rem;
+    }
+    .folio {
+        font-size: 10px;
+    }
+    .button {
+        margin-left: 5px;
+        font-size: 0.7rem;
+    }
+    .big-font {
+        font-size: 1.4rem;
+        margin-top: 100px;
+    }
+    .service-item {
+        flex: 1 1 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+}

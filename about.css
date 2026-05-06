@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+    background: url('Zavir.copy.PNG'), linear-gradient(to bottom, rgb(14, 125, 165), rgb(14, 125, 165));
+    background-blend-mode: multiply;
+    min-height: 100vh;
+    display: flex;
+;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.up-position {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    background-color: rgb(22, 51, 71);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Port {
+    color: chocolate;
+    font-family: arial;
+    font-size: large;
+    font-weight: bold;
+    text-shadow: 1px 1px 13px rgb(243, 105, 7);
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.folio {
+    color: chocolate;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.button {
+    padding: 0px;
+    background-color: rgb(22, 51, 71);
+    color: chocolate;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    text-shadow: 1px 1px 20px rgb(243, 105, 7);
+    padding-top: 4px;
+    color: rgb(247, 120, 9);
+}
+
+.button-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-header {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.About-us {
+    font-family: arial;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: aliceblue;
+    margin-bottom: 8px;
+}
+
+.Who-We {
+    font-family: arial;
+    font-weight: normal;
+    font-size: 1rem;
+    color: rgb(205, 211, 217);
+}
+
+.story-div {
+    background: rgba(14, 45, 65, 0.7);
+    backdrop-filter: blur(4px);
+    margin: 30px 20px;
+    padding: 25px;
+    border-radius: 16px;
+    border-left: 4px solid chocolate;
+}
+
+.story-title {
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: chocolate;
+    margin-bottom: 12px;
+}
+
+.story-para {
+    font-family: arial;
+    color: rgb(186, 191, 196);
+    line-height: 1.55;
+    font-size: 0.95rem;
+}
+
+.different-section {
+    margin: 20px 20px;
+}
+
+.different-title {
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: chocolate;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.different-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.different-card {
+    flex: 1;
+    min-width: 230px;
+    background: rgba(22, 51, 71, 0.65);
+    backdrop-filter: blur(4px);
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+    border-bottom: 2px solid chocolate;
+}
+
+.different-card:hover {
+    background: rgba(210, 105, 30, 0.25);
+    transform: translateY(-5px);
+}
+
+.different-card-title {
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: chocolate;
+    margin-bottom: 10px;
+}
+
+.different-card-desc {
+    font-family: arial;
+    color: rgb(186, 191, 196);
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+.tech-section {
+    background: rgba(14, 45, 65, 0.5);
+    margin: 20px 20px;
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.tech-title {
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: chocolate;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.tech-item {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-family: arial;
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tech-item:hover {
+    background: rgba(210, 105, 30, 0.5);
+    transform: scale(1.02);
+}
+
+.Ready-to-para {
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: aliceblue;
+    margin-bottom: 6px;
+}
+
+.down-para-of-Ready {
+    font-family: arial;
+    font-weight: normal;
+    color: rgb(186, 191, 196);
+    width: 100%;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.two-para-and-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 20px 40px 20px;
+    padding: 25px;
+    background: rgba(22, 51, 71, 0.5);
+    border-radius: 20px;
+}
+
+.Get-in-Touch {
+    width: 130px;
+    height: 38px;
+    border: none;
+    background-color: rgb(225, 126, 55);
+    color: aliceblue;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.Get-in-Touch:hover {
+    box-shadow: 1px 1px 13px rgb(243, 105, 7);
+    background-color: rgb(235, 116, 45);
+    transform: scale(1.02);
+}
+
+.about-footer {
+    background-color: rgb(14, 45, 65);
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    font-size: 0.75rem;
+    margin-top: auto;
+}
+
+@media (max-width: 1200px) {
+    .button-div {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .button-div {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .up-position {
+        flex-wrap: nowrap;
+        height: auto;
+        min-height: 55px;
+        padding: 0 12px;
+        position: fixed;
+    }
+    .Port {
+        font-size: 0.95rem;
+        margin-left: 0;
+    }
+    .button-div {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 6px;
+    }
+    .button {
+        margin-left: 6px;
+        font-size: 0.8rem;
+    }
+    .about-header {
+        margin-top: 75px;
+    }
+    .About-us {
+        font-size: 1.5rem;
+    }
+    .different-card {
+        min-width: 100%;
+    }
+    .two-para-and-button {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .Ready-to-para, .down-para-of-Ready {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .up-position {
+        padding: 0 10px;
+    }
+    .Port {
+        font-size: 0.85rem;
+    }
+    .folio {
+        font-size: 10px;
+    }
+    .button {
+        margin-left: 5px;
+        font-size: 0.7rem;
+    }
+    .About-us {
+        font-size: 1.3rem;
+    }
+    .Who-We {
+        font-size: 0.85rem;
+    }
+    .story-title, .different-title, .tech-title {
+        font-size: 1.1rem;
+    }
+    .story-para, .different-card-desc {
+        font-size: 0.8rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}

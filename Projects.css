@@ -1,0 +1,302 @@
+.body{
+        
+        background: url('Zavir.copy.PNG'), linear-gradient(to bottom, rgb(14, 125, 165), rgb(14, 125, 165));
+        background-blend-mode: multiply;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+}
+.up-position{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 50px;
+        background-color:rgb(22, 51, 71);
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+}
+.Port{
+        color: chocolate;
+        font-family: arial;
+        font-size: large;
+        font-weight: bold;
+        text-shadow: 1px 1px 13px rgb(243, 105, 7); 
+        margin-left: 10px;
+        
+        
+}
+.folio{
+        color: chocolate;
+        font-family: arial;
+        font-size: 14px;
+        font-weight: normal; 
+}
+.button{
+    padding: 0px;
+    background-color:rgb(22, 51, 71);
+    color: chocolate;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.button:hover{
+     text-shadow: 1px 1px 20px rgb(243, 105, 7); 
+     padding-top: 4px;
+     color: rgb(247, 120, 9);
+     
+}
+.button-div{
+    display: flex;
+    flex-direction: row;
+    margin-left: 850px;
+    
+}
+.Our-Projects{
+    font-family: arial;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 70px;
+    color: aliceblue;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    
+
+
+}
+.main-div-of-three-divs-dev{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -10px;
+  
+   
+
+   
+}
+.first-project,
+.second-project,
+.third-project{
+    height: 320px;
+    padding-top: 50px;
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(14, 94, 123);
+    border-radius: 12px;
+
+}
+
+
+.first-project-para-dev,
+.secon-project-para-dev,
+.third-project-para-dev{
+    font-family: arial;
+    color: rgb(172, 174, 179);
+    font-weight: normal;
+    width: 350px;
+    margin-left: 27px;
+    line-height: 18px;
+    margin-top: -6px;
+    
+
+}
+
+.first-project:hover,
+.second-project:hover,
+.third-project:hover{
+    box-shadow: 1px 1px 13px rgb(16, 119, 156);
+    
+}
+
+.Get-button-dev{
+    width: 120px;
+    margin-left: 30px;
+    height: 30px;
+    border: none;
+    background-color: rgb(225, 126, 55);
+    color: aliceblue;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+.Get-button-dev:hover,
+.third-Get-button-dev:hover{
+    box-shadow: 1px 1px 13px rgb(243, 105, 7); 
+}
+.two-para-and-button{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: -150px;
+}
+.Ready-to-para{
+    font-family: arial;
+    font-weight: bold;
+    color: aliceblue;
+    margin-left: 200px;
+    margin-bottom: -4px;
+}
+.down-para-of-Ready{
+    font-family: arial;
+    font-weight: normal;
+    color: rgb(186, 191, 196);
+    margin-left: 200px;
+    width: 500px;
+}
+.Get-in-Touch{
+        margin-left: 300px;
+        margin-top: 35px;
+        width: 130px;
+        height: 30px;
+        border: none;
+        background-color: rgb(225, 126, 55);
+        color: aliceblue;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+}
+.Get-in-Touch:hover{
+        box-shadow: 1px 1px 13px rgb(243, 105, 7); 
+}
+
+.Rahat-data-img,
+.zafarmal-data-img,
+.app-data-img{
+    height: 220px;
+    width: 400px;
+    margin-top:-50px;
+     border-radius: 12px;
+
+}
+.title-para{
+    font-family: arial;
+    margin-left: 27px;
+    color: white;
+    font-weight: bolder;
+}
+.third-Get-button-dev{
+    width: 120px;
+    margin-left: 30px;
+    height: 30px;
+    border: none;
+    background-color: rgb(225, 126, 55);
+    color: aliceblue;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    margin-left: 0px;
+    
+}
+.second-Get-button-dev{
+    width: 120px;
+    margin-left: 30px;
+    height: 30px;
+    border: none;
+    background-color: rgb(225, 126, 55);
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+     
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 1200px) {
+    .button-div {
+        margin-left: 400px;
+    }
+    .two-para-and-button {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .Ready-to-para, .down-para-of-Ready {
+        margin-left: 20px;
+        text-align: center;
+        width: auto;
+    }
+    .Get-in-Touch {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .button-div {
+        margin-left: 200px;
+    }
+    .main-div-of-three-divs-dev {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .first-project, .second-project, .third-project {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .up-position {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 50px;
+        padding: 10px 0;
+        position: relative;
+    }
+    .button-div {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+    .two-para-and-button {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .Ready-to-para, .down-para-of-Ready {
+        margin-left: 0;
+        width: 90%;
+    }
+    .Get-in-Touch {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .Rahat-data-img, .zafarmal-data-img, .app-data-img {
+        width: 100%;
+        height: auto;
+    }
+    .first-project-para-dev, .secon-project-para-dev, .third-project-para-dev {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .up-position {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .button-div {
+        margin-left: 15px;
+    }
+    .Our-Projects {
+        font-size: large;
+    }
+}
